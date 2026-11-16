@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: silver_admissions.
+    columns:
+      - name: admission_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: patient_id
+        data_tests:
+            - not_null
+      
+      - name: admissions_date
+        data_tests:
+          - not_null
+              
+
+
+  - name: silver_bed_capavity
+    columns:
+      - name: department
+          - unique
+          - not_null
+      - name: total_beds
+          - unique
+          - not_null
+  
+  - name: gold_daily_activity
+    columns: 
+      - name: activity_date
+        data_tests:
+          - unique
+          - not_null
+
+  - name: gold_bed_occupancy
+    columns: 
+      - name: department
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: occupancy_rate
+        description =  '% of total beds occupied'
+

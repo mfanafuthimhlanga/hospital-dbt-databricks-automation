@@ -1,0 +1,13 @@
+version: 2
+sources:
+    - name: hospital
+      databese: workspace
+      schema: hosptial_bronze
+
+      table:
+        - name: raw_admissions
+          description: raw patient raw_admissions
+
+        - name: raw_bed_capacity
+          description: raw bed capacities
+   
